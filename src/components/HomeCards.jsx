@@ -1,0 +1,30 @@
+import React from 'react'
+import AddToCartBtn from './AddToCartBtn'
+import Button from './Button'
+
+const HomeCards = ({image, heading, subheadingwidth, subheading, btn1, btn2, like, hr, btn3, gap, imgwidth, imgheight, subWidth, price, stars, rating }) => {
+  return (
+    <div className='flex flex-col gap-3'>
+        <img src={image} className='object-contain -ml-3' style={{ width: `${imgwidth}px`, height: `${imgheight}px`}} />
+        <h1 className='font-bold text-[22px] text-[#000000]' style={{ width: `${subheadingwidth}px`}} >{heading}</h1>
+        {hr}
+        <p className='text-[13px] text-[#000000]' style={{ width: `${subWidth}px`}}>{subheading}</p>
+        <div className='flex items-center gap-2'>
+          <p className='text-[#0A1A2F] text-[22px] font-bold'>{price}</p>
+          <img src={stars} />
+          
+        </div>
+        <div className='flex items-center'>
+            {/* <AddToCartBtn />
+            <Button text="Buy Now" />
+            <img src='/mdi-light_heart (1).png' className='w-[30px] h-[24px]' /> */}
+            {btn1}
+            {btn2}
+            {like}
+            {btn3}
+        </div>
+    </div>
+  )
+}
+
+export default HomeCards
