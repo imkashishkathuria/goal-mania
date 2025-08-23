@@ -18,7 +18,7 @@ const Header = () => {
                 { name: "articles", url:"" },
                 { name: "info", url:"" },
                 { name: "about", url:"" },
-                { name: "contact", url:"" },
+                { name: "contact", url:"contact" },
                 { name: "shop", url:"product" }
 
             ].map((item, index, arr) => (
