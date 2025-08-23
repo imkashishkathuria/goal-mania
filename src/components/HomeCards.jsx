@@ -1,11 +1,15 @@
 import React from 'react'
 import AddToCartBtn from './AddToCartBtn'
 import Button from './Button'
+import { useNavigate } from 'react-router-dom';
 
 const HomeCards = ({image, heading, subheadingwidth, subheading, btn1, btn2, like, hr, btn3, gap, imgwidth, imgheight, subWidth, price, stars, rating }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className='flex flex-col gap-3'>
-        <img src={image} className='object-contain -ml-3' style={{ width: `${imgwidth}px`, height: `${imgheight}px`}} />
+        <img src={image} className='object-contain -ml-3' style={{ width: `${imgwidth}px`, height: `${imgheight}px`}} onClick={()=>navigate(`/product${image}`)}/>
         <h1 className='font-bold text-[22px] text-[#000000]' style={{ width: `${subheadingwidth}px`}} >{heading}</h1>
         {hr}
         <p className='text-[13px] text-[#000000]' style={{ width: `${subWidth}px`}}>{subheading}</p>
