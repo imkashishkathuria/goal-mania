@@ -18,12 +18,12 @@ const ProductHomepage = () => {
   return (
     <div>
       <Header />
-      <div className='flex my-10 px-15 py-5 mx-30 justify-between items-center bg-[#F0F0F0] rounded-[40px] '>
+      <div className='flex my-5 md:my-10 px-7 md:px-15 py-5 mx-5 md:mx-30 justify-between items-center bg-[#F0F0F0] rounded-[40px] '>
         <div className='flex gap-3 items-center'>
           <img src='/Frame.png' className='w-[18px] h-[18px]' />
           <input placeholder='Search for products' type='text' className='border-none outline-none' />
         </div>
-        <div className='flex items-center gap-2 border border-[#0A1A2F] px-4 py-2 rounded-[20px]'>
+        <div className='hidden md:flex items-center gap-2 border border-[#0A1A2F] px-4 py-2 rounded-[20px]'>
           <p className='text-[#0A1A2F] text-[14px] font-bold'>Search</p>
           <img src='/mdi-light_arrow-up (1).png' className='w-[11px] h-[11px]' />
 

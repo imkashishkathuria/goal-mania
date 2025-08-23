@@ -4,6 +4,8 @@ import { Route, Router, Routes } from 'react-router-dom'
 import ProductHomepage from './pages/ProductHomepage'
 import ProductLandingPage from './pages/ProductLandingPage'
 import Contact from './pages/Contact'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
           <Route path='/product' element={<ProductHomepage />} />
           <Route path='/product/:id' element={<ProductLandingPage />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
         </Routes>
  
      
