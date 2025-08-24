@@ -6,6 +6,8 @@ import Button from '../components/Button';
 import ProductService from '../components/ProductService';
 import Piùvenduti from '../components/Piùvenduti';
 import Footer from '../components/Footer';
+import Reviews from '../components/Reviews';
+import HomeSections from '../components/HomeSections';
 
 const ProductLandingPage = () => {
 
@@ -70,8 +72,9 @@ const ProductLandingPage = () => {
   return (
     <div>
       <Header />
-      <div className="grid grid-cols-12 gap-6 px-7 py-6 ">
-        <div className='col-span-2 flex flex-col gap-3 items-center'>
+      <div className="flex flex-col md:grid grid-cols-12 md:gap-6 px-7 py-6 ">
+        
+        <div className='hidden md:flex col-span-2  flex-col gap-3 items-center'>
           <img src='/weui_arrow-outlined (1).png' />
           <div className="flex-1 overflow-y-auto">
             {images.map((src, index) => (
@@ -89,35 +92,57 @@ const ProductLandingPage = () => {
             ))}
           </div>
         </div>
-        <div className="col-span-5 flex">
-          <img src={`/${image.id}`} alt="Main Product" className="w-[500px] h-[750px] object-contain -mt-23" />
-        </div>
-
-        <div className=" col-span-5 mt-6">
-          {/* Title & Price */}
-          <h2 className="text-[25px] font-extrabold text-[#000000]">
+        <div className='md:hidden flex flex-col gap-1 mb-2'>
+          <h2 className="text-[24px] font-extrabold text-[#000000]">
             One Life Graphic T-shirt
           </h2>
-          <div className="flex items-center gap-3 mt-2">
+          <p className="text-[#00000099] text-[13px]">
+            This graphic t-shirt which is perfect for any occasion. Crafted from a
+            soft and breathable fabric, it offers superior comfort and style.
+          </p>
+          
+
+
+        </div>
+        
+        <div className="md:col-span-5 md:flex">
+          <img src={`/${image.id}`} alt="Main Product" className="md:w-[500px] md:h-[750px] object-contain md:-mt-23" />
+        </div>
+        <div className="md:hidden flex items-center gap-3 mt-2">
+            <span className="text-[25px] font-extrabold text-[#000000]">$260</span>
+            <span className="text-[18px] text-[#000000]">$300</span>
+            <span className="text-[#E53E3E] font-medium">-40%</span>
+            <img src='/Frame 11.png' className='object-contain w-[100px]' />
+          </div>
+
+        
+        
+
+        <div className=" md:col-span-5 md:mt-6">
+          {/* Title & Price */}
+          <h2 className="hidden md:block text-[25px] font-extrabold text-[#000000]">
+            One Life Graphic T-shirt
+          </h2>
+          <div className="hidden md:flex items-center gap-3 mt-2">
             <span className="text-[25px] font-extrabold text-[#000000]">$260</span>
             <span className="text-[25px] text-[#0000004D]">$300</span>
             <span className="text-[#E53E3E] font-medium">-40%</span>
             <img src='/Frame 11.png' className='object-contain' />
           </div>
-          <p className="text-[#00000099] text-[15px] mt-2">
+          <p className="text-[#00000099] text-[15px] mt-2 hidden md:block">
             This graphic t-shirt which is perfect for any occasion. Crafted from a
             soft and breathable fabric, it offers superior comfort and style.
           </p>
           <hr className='w-[400px] h-[2px] mt-5 text-[#b1b1b199] mb-4' />
 
           {/* Customize */}
-          <h3 className=" font-semibold text-[#FF7A00]">
+          <h3 className="font-semibold text-[25px] md:text-[20px] text-[#FF7A00]">
             Customize Your Jersey
           </h3>
           <p className='text-[14px] text-[#333333] mt-4'>Jersey Type</p>
 
           {/* Jersey Type */}
-          <div className="flex gap-4 mt-3">
+          <div className="flex gap-2 md:gap-4 mt-3">
             <div className='flex gap-2 items-center'>
               <div className='w-[14px] h-[14px] bg-[#D9D9D9] rounded-full' />
               <p>
@@ -134,7 +159,7 @@ const ProductLandingPage = () => {
           <hr className='w-[400px] h-[2px] mt-5 text-[#b1b1b199] mb-4' />
 
           {/* Input Fields */}
-          <div className="flex gap-3 mt-4">
+          <div className="flex flex-col md:flex-row gap-3 mt-4">
             <input
               type="text"
               placeholder="Type here your name on shirt..."
@@ -149,10 +174,10 @@ const ProductLandingPage = () => {
 
           {/* Patches */}
           <h4 className="mt-6 font-semibold text-[#0A1A2F]">Add Official Patches</h4>
-          <div className='flex justify-between items-center'>
+          <div className='flex flex-col md:flex-row md:justify-between md:items-center'>
             <div className="flex gap-3 mt-3">
               {["Ellipse 45 (1)", "image 1 (1)", "Ellipse 45 (2)", "image 2", "Ellipse 45 (2)", "image 3"].map((item, index) => (
-                <img key={index} src={`/${item}.png`} className='object-contain w-[16px] h-[16px] rounded-full' />
+                <img key={index} src={`/${item}.png`} className='object-contain md:w-[16px] md:h-[16px] rounded-full' />
               ))}
             </div>
             <div className='flex gap-3 mt-2'>
@@ -162,7 +187,7 @@ const ProductLandingPage = () => {
                   Small
                 </p>
               </div>
-              {["Medium", "Large", "Large", "Kids"].map((item, index) => (
+              {["Medium", "Large", "Kids"].map((item, index) => (
                 <div className='flex gap-1 items-center'>
                   <div key={index} className='w-[14px] h-[14px] bg-[#D9D9D9] rounded-full' />
                   <p className='text-[14px]'>{item}</p>
@@ -173,7 +198,7 @@ const ProductLandingPage = () => {
 
           {/* Add-ons */}
           <h4 className="mt-6 font-semibold text-[#0A1A2F]">Add Matching Items</h4>
-          <div className="flex gap-4 mt-3">
+          <div className="flex flex-col md:flex-row gap-4 mt-3">
             <div className='flex gap-2 items-center'>
               <div className='w-[14px] h-[14px] bg-[#D9D9D9] rounded-full' />
               <p>Add Matching Shorts (+€11)</p>
@@ -185,8 +210,22 @@ const ProductLandingPage = () => {
           </div>
 
           {/* Sizes */}
-          <h4 className="mt-6 font-semibold text-[#0A1A2F]">Choose Size</h4>
-          <div className="flex gap-2 flex-wrap mt-3">
+          <h4 className="mt-6 font-semibold text-[#0A1A2F]">Choose Size <span className='md:hidden'>& Quantity</span></h4>
+          <div className='md:hidden flex gap-3 mt-2'>
+              <div className='flex gap-1 items-center'>
+                <img src='/Ellipse 45.png' className='w-[14px] h-[14px]' />
+                <p className='text-[14px]'>
+                  Small
+                </p>
+              </div>
+              {["Medium", "Large", "Kids"].map((item, index) => (
+                <div className='flex gap-1 items-center'>
+                  <div key={index} className='w-[14px] h-[14px] bg-[#D9D9D9] rounded-full' />
+                  <p className='text-[14px]'>{item}</p>
+                </div>
+              ))}
+            </div>
+          <div className="hidden md:flex gap-2 flex-wrap mt-3">
             {sizes.map((size) => (
               <button
                 key={size}
@@ -202,7 +241,8 @@ const ProductLandingPage = () => {
 
           {/* Quantity & Buttons */}
           <div className="flex items-center gap-4 mt-6 mb-10">
-            <div className="flex items-center bg-[#F0F0F0] rounded-full">
+            
+            <div className="hidden md:flex items-center bg-[#F0F0F0] rounded-full">
               <button
                 className="px-3 py-2"
               >
@@ -226,16 +266,16 @@ const ProductLandingPage = () => {
       <ProductService bgColor="#0A1A2F" textcolor="#F5F5F5" img1="Frame (2)" img2="Frame (3)" img3="Vector (9)" img4="Frame (4)" />
 
 
-      <div className="px-20 py-10">
+      <div className="px-20 py-5 md:py-10">
         {/* Tabs */}
-        <div className="flex justify-between border-b border-[#0000001A] px-30">
+        <div className="hidden md:flex justify-between border-b border-[#0000001A] px-30">
           {["Dettagli prodotto", "Valutazioni e recensioni", "Domande frequenti"].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`px-6 py-2 text-md font-medium ${activeTab === tab
-                  ? "border-b-2 border-black text-[#0A1A2F]"
-                  : "text-gray-500"
+                ? "border-b-2 border-black text-[#0A1A2F]"
+                : "text-gray-500"
                 }`}
             >
               {tab}
@@ -244,7 +284,7 @@ const ProductLandingPage = () => {
         </div>
 
         {/* Header */}
-        <div className="flex justify-between items-center mt-6">
+        <div className="hidden md:flex justify-between items-center mt-6">
           <h3 className="text-lg text-[#0A1A2] font-semibold">
             All Reviews <span className="text-gray-500">(451)</span>
           </h3>
@@ -262,7 +302,7 @@ const ProductLandingPage = () => {
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 px-10">
+        <div className="hidden md:grid md:grid-cols-2 gap-6 mt-6 px-10">
           {reviews.map((review, i) => (
             <div
               key={i}
@@ -271,11 +311,11 @@ const ProductLandingPage = () => {
               {/* Stars */}
               <div className='flex justify-between items-center'>
 
-              <div className="flex text-yellow-500">
-                {"★".repeat(review.rating)}
-                {"☆".repeat(5 - review.rating)}
-              </div>
-              <img src='/Frame (5).png' className='w-[14px] object-contain'/>
+                <div className="flex text-yellow-500">
+                  {"★".repeat(review.rating)}
+                  {"☆".repeat(5 - review.rating)}
+                </div>
+                <img src='/Frame (5).png' className='w-[14px] object-contain' />
               </div>
               {/* Name + Verified */}
               <div className="flex items-center gap-2 font-semibold">
@@ -292,6 +332,55 @@ const ProductLandingPage = () => {
           ))}
         </div>
       </div>
+
+      <div className='md:hidden px-3'>
+        <HomeSections heading="Dettagli prodotto" cards={
+          <div className='flex flex-col gap-2 text-[11px]'>
+            <div className='flex flex-col gap-2'>
+              <p>Premium Quality Materials
+                Our jerseys are crafted from high-quality, breathable materials that ensure comfort during wear. Each jersey is made with attention to detail, featuring:
+                
+                </p>
+                <div>
+             <ul className='list-disc pl-5'>
+              <li>Premium polyester fabric with moisture-wicking technology</li>
+                <li>Durable stitching for long-lasting wear</li>
+                <li>Official team and sponsor logos</li>
+                <li>Authentic design and colors</li></ul>
+                </div>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <p>Delivery Information
+                
+                </p>
+                <div>
+             <ul className='list-disc pl-5'>
+              <li>Shipping: 7–14 days</li>
+                <li>Refund: max within 7 days</li>
+                </ul>
+                </div>
+            </div>
+            <div className='flex flex-col gap-2'>
+              <p> Secure Shopping Guarantee
+                
+                </p>
+                <div>
+             <ul className='list-disc pl-5'>
+              <li>100% Authentic Product Guarantee</li>
+                <li>Secure Payment Processing</li>
+                 <li>Money-Back Guarantee</li>
+                  <li>Customer Support 7 Days a Week</li>
+                </ul>
+                </div>
+            </div>
+          
+          </div>
+        } />
+      </div>
+      <div className='md:hidden'>
+        <Reviews />
+      </div>
+
 
       <Piùvenduti />
       <Footer />
