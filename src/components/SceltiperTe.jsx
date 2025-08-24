@@ -21,8 +21,8 @@ const SceltiperTe = () => {
                 <div className='hidden md:block'>
                     <HomeCards image="/Rectangle 8.png" heading="Maglia Ufficiale Inter 2024/25" subheading="Indossa i colori nerazzurri con la maglia ufficiale della nuova stagione. Tessuto traspirante e design autentico."  btn1={
                     <div className='flex gap-3 items-center'>
-                        <AddToCartBtn size="12" px="8" py="4" />
-                        <Button text="Buy Now" px="8" py="4" size="12" />
+                        <AddToCartBtn size="14" px="8" py="4" />
+                        <Button text="Buy Now" px="8" py="4" size="18" />
                          <img src='/mdi-light_heart (1).png' className='w-[30px] h-[24px]' />
                     </div>
                 } />

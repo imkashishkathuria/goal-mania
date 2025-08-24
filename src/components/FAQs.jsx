@@ -33,19 +33,28 @@ const FAQs = () => {
   return (
     <div>
       <div>
+        
 
         
-      <div className='bg-[#0A1A2F] py-4 flex justify-center'>
+      <div className='bg-[#0A1A2F] py-4 hidden md:flex justify-center'>
+
+       
         <h1 className='text-[30px] text-[#FFEFE5] font-bold'>
           Domande frequenti
         </h1>
       </div>
 
-      <div className="bg-[#F0F0F0]  py-14 px-6 ">
+      <div className="bg-[#F0F0F0] md:px-6 md:py-3">
+        <div className='md:hidden '>
+          <img src='/Group 237882.png' className='w-full object-contain' />
+         
+
+        </div>
         
 
         {/* Tabs */}
-        <div className="flex justify-center space-x-6 border-b border-gray-300 mb-8">
+        <div className="hidden md:flex justify-center space-x-6 border-b border-gray-300 mb-8">
+           
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -61,11 +70,11 @@ const FAQs = () => {
         </div>
 
         {/* FAQ Content */}
-        <div className="max-w-3xl mx-auto space-y-6">
+        <div className="max-w-3xl mx-auto space-y-6 py-4 px-7">
           {faqs[activeTab].map((item, index) => (
-            <div key={index}>
-              <h3 className="font-semibold text-[#333333]">{item.q}</h3>
-              <p className="text-[#333333] mt-1">{item.a}</p>
+            <div key={index} className='border-b-2 border-white md:border-none md:pb-0 pb-4'>
+              <h3 className="font-bold md:font-semibold text-[#0A1A2F] text-[20px]">{item.q}</h3>
+              <p className="text-[#333333] mt-1 text-[13px] md:text-[18px]">{item.a}</p>
             </div>
           ))}
         </div>
