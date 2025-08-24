@@ -8,7 +8,7 @@ const SceltiperTe = () => {
   return (
     <div className='px-5 md:px-0 py-7 flex justify-center'>
         <HomeSections heading="Scelti per Te" subheading="Scopri la nostra selezione di maglie, accessori e articoli ufficiali per vivere il calcio ogni giorno." gap="5" cards={
-            <div className='flex px-5 md:px-20 gap-3 md:gap-5 w-[100vw] overflow-auto md:w-full md:overflow-hidden'>
+            <div className='flex px-5 md:px-10 gap-3 md:gap-5 w-[100vw] overflow-auto md:w-full md:overflow-hidden'>
                 <div className='md:hidden w-[220px] h-[420px] shrink-0'>
                 <HomeCards image="/Rectangle 8.png" heading="Maglia Ufficiale Inter 2024/25" subheading="Indossa i colori nerazzurri con la maglia ufficiale della nuova stagione. Tessuto traspirante e design autentico."  btn1={
                     <div className='flex gap-1 md:gap-3 items-center'>
@@ -19,7 +19,7 @@ const SceltiperTe = () => {
                 } />
                 </div>
                 <div className='hidden md:block'>
-                    <HomeCards image="/Rectangle 8.png" heading="Maglia Ufficiale Inter 2024/25" subheading="Indossa i colori nerazzurri con la maglia ufficiale della nuova stagione. Tessuto traspirante e design autentico."  btn1={
+                    <HomeCards image="/Rectangle 8.png" heading="Maglia Ufficiale Inter 2024/25" imgsmwidth="400" subheading="Indossa i colori nerazzurri con la maglia ufficiale della nuova stagione. Tessuto traspirante e design autentico."  btn1={
                     <div className='flex gap-3 items-center'>
                         <AddToCartBtn size="14" px="8" py="4" />
                         <Button text="Buy Now" px="8" py="4" size="18" />

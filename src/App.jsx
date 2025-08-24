@@ -6,6 +6,7 @@ import ProductLandingPage from './pages/ProductLandingPage'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import SeriesA from './pages/SeriesA'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path="/seriea" element={<SeriesA />} />
         </Routes>
  
      

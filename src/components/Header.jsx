@@ -58,7 +58,7 @@ const Header = () => {
 
           {[
             { name: "home", url: "" },
-            { name: "category", url: "" },
+            { name: "category", url: "seriea" },
             { name: "articles", url: "" },
             { name: "info", url: "" },
             { name: "about", url: "" },

@@ -20,7 +20,7 @@ const Contact = () => {
             className="hidden md:block rounded-lg object-cover"
           />
           <img src='/Frame 238100.png' className='md:hidden w-full object-contain' />
-          <div className="hidden md:flex bg-[#0B1B3B] text-white p-6 rounded-2xl space-y-4">
+          <div className="hidden md:flex flex-col bg-[#0B1B3B] text-white p-6 rounded-2xl space-y-4">
             <p className="flex items-center gap-3">
               <img src='/Vector (11).png' /> +39 090 330 47732
             </p>
