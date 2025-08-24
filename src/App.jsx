@@ -8,6 +8,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import SeriesA from './pages/SeriesA'
 import PremierLeague from './pages/PremierLeague'
+import LaLigaALMemento from './pages/LaLigaALMemento'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/signup' element={<Signup />} />
           <Route path="category/seriea" element={<SeriesA />} />
            <Route path="category/premier-league" element={<PremierLeague />} />
+            <Route path="category/laliga" element={<LaLigaALMemento />} />
         </Routes>
     </div>
   )
