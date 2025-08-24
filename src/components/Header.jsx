@@ -88,10 +88,10 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenu && (
-        <div className="absolute top-[65px] left-0 w-full bg-[#0A1A2F] text-white flex flex-col gap-4 px-6 py-4 md:hidden">
+        <div className="absolute top-[65px] left-0 z-50 w-full bg-[#0A1A2F] text-white flex flex-col gap-4 px-6 py-4 md:hidden">
           {[
             { name: "home", url: "" },
-            { name: "category", url: "" },
+            { name: "category", url: "seriea" },
             { name: "articles", url: "" },
             { name: "info", url: "" },
             { name: "about", url: "" },
