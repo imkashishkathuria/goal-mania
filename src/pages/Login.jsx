@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [loginState, setLoginState] = useState(true); // true = login, false = signup
+  const [loginState, setLoginState] = useState(true);
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -83,6 +85,7 @@ const Login = () => {
               <button
                 type="submit"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-medium transition"
+                onClick={()=>navigate("/login-otp")}
               >
                 {loginState ? "Spedisci →" : "Crea account →"}
               </button>

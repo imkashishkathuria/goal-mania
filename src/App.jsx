@@ -10,6 +10,7 @@ import SeriesA from './pages/SeriesA'
 import PremierLeague from './pages/PremierLeague'
 import LaLigaALMemento from './pages/LaLigaALMemento'
 import Ligue1 from './pages/Ligue1'
+import SignupOtp from './pages/SignupOtp'
 
 const App = () => {
   return (
@@ -20,11 +21,13 @@ const App = () => {
           <Route path='/product/:id' element={<ProductLandingPage />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
+          <Route path='/login-otp' element={<SignupOtp />} />
+
           <Route path="category/seriea" element={<SeriesA />} />
-           <Route path="category/premier-league" element={<PremierLeague />} />
-            <Route path="category/laliga" element={<LaLigaALMemento />} />
-            <Route path='category/ligue1' element={<Ligue1 />} />
+          <Route path="category/premier-league" element={<PremierLeague />} />
+          <Route path="category/laliga" element={<LaLigaALMemento />} />
+          <Route path='category/ligue1' element={<Ligue1 />} />
+
         </Routes>
     </div>
   )
