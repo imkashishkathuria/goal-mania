@@ -11,6 +11,7 @@ import PremierLeague from './pages/PremierLeague'
 import LaLigaALMemento from './pages/LaLigaALMemento'
 import Ligue1 from './pages/Ligue1'
 import SignupOtp from './pages/SignupOtp'
+import PopupV1 from './pages/PopupV1'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
           <Route path='/login-otp' element={<SignupOtp />} />
+          <Route path='/popup-one' element={<PopupV1 />} />
 
           <Route path="category/seriea" element={<SeriesA />} />
           <Route path="category/premier-league" element={<PremierLeague />} />
