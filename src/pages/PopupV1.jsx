@@ -11,7 +11,7 @@ const PopupV1 = () => {
         {/* Close Button */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-4 left-4 bg-black text-white p-2 rounded-full"
+          className="absolute top-4 left-4 bg-[#0A1A2F] text-white p-2 rounded-full"
         >
           <X size={16} />
         </button>
@@ -23,15 +23,15 @@ const PopupV1 = () => {
             {/* replace with your logo */}
           </div>
 
-          <h2 className=" md:text-[40px] text-center font-bold text-[#131228]">
+          <h2 className=" md:text-[40px] text-center font-bold text-[#170F49]">
             Offerta a Tempo Limitato
           </h2>
           <p className="text-gray-500 text-center text-lg mb-4">Maglia da Calcio Ufficiale</p>
 
           <div className="flex flex-col md:flex-row items-center gap-3 text-lg mb-4">
             <span className="text-black text-[20px]">A soli</span>
-            <span className="text-orange-500 font-bold text-2xl">30€</span>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-2 rounded-full font-medium transition">
+            <span className="text-[#FF7A00] font-bold text-2xl">30€</span>
+            <button className="bg-[#FF7A00] hover:[#FF7A00] text-white px-10 py-2 rounded-full font-medium transition">
               Compra Ora →
             </button>
           </div>
