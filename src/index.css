@@ -4,4 +4,8 @@
 
 *{
     font-family: "Mulish", sans-serif;
+
+}
+::-webkit-scrollbar{
+    display: none;
 }
