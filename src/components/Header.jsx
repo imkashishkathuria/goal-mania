@@ -21,6 +21,7 @@ const Header = () => {
         { name: "Champions League", url: "category/champions-league" },
         { name: "Transfer", url: "category/transfer" },
         { name: "Fantacalcio", url: "category/fantacalcio" },
+        { name: "Colpo di Mercato", url: "category/colpo-di-mercato" },
       ],
     },
     { name: "articles", url: "" },
