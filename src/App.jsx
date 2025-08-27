@@ -13,6 +13,7 @@ import Ligue1 from './pages/Ligue1'
 import SignupOtp from './pages/SignupOtp'
 import PopupV1 from './pages/PopupV1'
 import PopupV2 from './pages/PopupV2'
+import ChampionsLeague from './pages/ChampionsLeague'
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="category/premier-league" element={<PremierLeague />} />
           <Route path="category/laliga" element={<LaLigaALMemento />} />
           <Route path='category/ligue1' element={<Ligue1 />} />
+          <Route path='category/champions-league' element={<ChampionsLeague />} />
 
         </Routes>
     </div>
