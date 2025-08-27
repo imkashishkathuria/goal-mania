@@ -41,7 +41,7 @@ const ProductHomepage = () => {
           {/* <div className="relative h-[80vh]"> */}
 
             <img
-              src="/Rectangle 2 (1).png"
+              src="/F408BD71-75CD-4259-84D6-53674DD977D4.jpeg"
               className="w-full h-full object-contain"
             />
 
@@ -76,9 +76,9 @@ const ProductHomepage = () => {
           </div>
         </div>
 
-        <div className='absolute inset-0 translate-y-1/2 mt-10 ml-3 mr-3 md:mr-0 md:translate-y-20 md:ml-17'>
+        {/* <div className='absolute inset-0 translate-y-1/2 mt-10 ml-3 mr-3 md:mr-0 md:translate-y-20 md:ml-17'>
           <HeroCard heading="Trova la Maglia che Rispecchia il Tuo Tifo" subheading="Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style." />
-        </div>
+        </div> */}
 
 
       </div>
