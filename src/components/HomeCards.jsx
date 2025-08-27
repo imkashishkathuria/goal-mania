@@ -8,8 +8,10 @@ const HomeCards = ({image, heading, subheadingwidth, subheading, btn1, btn2, lik
   const navigate = useNavigate();
 
   return (
-    <div className='flex flex-col gap-3'>
-        <img src={image} className={`object-contain md:-ml-3 w-[${imgsmwidth}px] md:w-[${imgwidth}px] h-[${imgsmheight}px] md:h-[${imgheight}px]` } onClick={()=>navigate(`/product${image}`)}/>
+    <div className=''>
+      <div className='flex flex-col justify-between  gap-3'>
+        <div className='flex flex-col gap-3'>
+        <img src={image} className="object-contain w-full md:-ml-3" onClick={()=>navigate(`/product${image}`)}/>
         <h1 className='font-bold text-[14px] md:text-[22px] text-[#000000]' style={{ width: `${subheadingwidth}px`}} >{heading}</h1>
         {hr}
         <p className='text-[10px] md:text-[13px] text-[#000000]' style={{ width: `${subWidth}px`}}>{subheading}</p>
@@ -18,14 +20,14 @@ const HomeCards = ({image, heading, subheadingwidth, subheading, btn1, btn2, lik
           <img src={stars} />
           
         </div>
+        </div>
         <div className='flex items-center'>
-            {/* <AddToCartBtn />
-            <Button text="Buy Now" />
-            <img src='/mdi-light_heart (1).png' className='w-[30px] h-[24px]' /> */}
+           
             {btn1}
             {btn2}
             {like}
             {btn3}
+        </div>
         </div>
     </div>
   )

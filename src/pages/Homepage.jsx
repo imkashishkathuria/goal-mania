@@ -16,7 +16,7 @@ const Homepage = () => {
       <HomeHero />
       <SerieAClubs />
       <SceltiperTe />
-      <UltimeNotizie />
+      <UltimeNotizie img1="/Frame 237883.png " img2="/Frame 237883 (1).png " img3="/9e9f636a4abf54d1438e0b68d45f7fe2fd3b75ab.jpg" />
       <ProssimePartite />
       <StorieinPrimoPiano />
       <UltimeNotizie2 />

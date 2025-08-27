@@ -37,15 +37,15 @@ const ProductHomepage = () => {
 
 
       {/* <div className='relative '> */}
-        <div className="hidden md:block relative">
-          {/* <div className="relative h-[80vh]"> */}
+      <div className="hidden md:block relative">
+        {/* <div className="relative h-[80vh]"> */}
 
-            <img
-              src="/F408BD71-75CD-4259-84D6-53674DD977D4.jpeg"
-              className="w-full h-full object-contain"
-            />
+        <img
+          src="/F408BD71-75CD-4259-84D6-53674DD977D4.jpeg"
+          className="w-full h-full object-contain"
+        />
 
-            {/* <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
+        {/* <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
               <img
                 src="/IMG_6873 3.png"
                 className="object-contain w-full h-full "
@@ -55,7 +55,7 @@ const ProductHomepage = () => {
                 }}
               />
             </div> */}
-          {/* </div> */}
+        {/* </div> */}
 
 
         {/* </div> */}
@@ -123,17 +123,9 @@ const ProductHomepage = () => {
 
       <div className='py-4 md:py-8 flex justify-center items-center'>
         <HomeSections heading="Ultimi prodotti" subheading="Comfort e stile in un solo capo." gap="7" cards={
-          <div className='flex w-[100vw] md:w-full overflow-auto md:overflow-hidden gap-2 md:gap-6 px-5 md:px-10'>
-
-            <div className='md:hidden w-[100px] shrink-0'>
-              <UltimiCard />
-            </div>
-            <div className='hidden md:block'>
-              <UltimiCard />
-            </div>
-          </div>
-
-
+        
+          <UltimiCard />
+          
         } />
       </div>
 
@@ -156,7 +148,7 @@ const ProductHomepage = () => {
         </div>
       </div>
 
-     <Reviews />
+      <Reviews />
 
       <ProductService bgColor="#F0F0F0" textcolor="#000000C9" img1="Vector (5)" img2="Vector (6)" img3="Vector (7)" img4="Frame (1)" />
       <FAQs />
