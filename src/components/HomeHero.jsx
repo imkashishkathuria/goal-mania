@@ -28,7 +28,7 @@ const HomeHero = () => {
         </div>
 
 
-        <div className='absolute inset-0 translate-y-1/2 mt-23 ml-3 mr-3 md:mr-0 md:translate-y-20 md:ml-17'>
+        <div className='absolute inset-0 translate-y-1/2 mt-6 ml-3 mr-3 md:mr-0 md:translate-y-20 md:ml-17'>
           <HeroCard heading="Resta Sempre Aggiornato sul Mondo del Calcio" subheading="Dalle ultime novità di Serie A ai colpi di mercato internazionali, scopri notizie fresche, analisi e approfondimenti in tempo reale." />
         </div>
 
