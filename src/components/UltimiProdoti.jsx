@@ -1,10 +1,8 @@
-
-
 import React, { useRef } from 'react'
 import AddToCartBtn from './AddToCartBtn';
 import Button from './Button';
 
-const SceltiperTe = () => {
+const UltimiProdoti = () => {
     const scrollRef = useRef(null);
 
     const scroll = (direction) => {
@@ -17,44 +15,40 @@ const SceltiperTe = () => {
 
     const articles = [
         {
-            img: "/Rectangle 8.png",
-            title: "Maglia Ufficiale Inter 2024/25",
-            desc: "Indossa i colori nerazzurri con la maglia ufficiale della nuova stagione. Tessuto traspirante e design autentico.",
+            img: "/Frame 32.png",
+            title: "Maglia Napoli Partenope Edizione Speciale",
+
         },
         {
-            img: "/Rectangle 8 (1).png",
-            title: "Maglia Retro Milan 1993/94",
-            desc: "Rivivi la storica stagione con la maglia iconica rossonera, un must per ogni vero tifoso.",
+            img: "/Frame 238015.png",
+            title: "Maglia INTER x VR46 EDIZIONE LIMITATA",
+
         },
         {
-            img: "/Rectangle 8 (2).png",
-            title: "Pallone Serie A 2024",
-            desc: "Il pallone ufficiale della Serie A, perfetto per collezionisti e per il gioco in campo.",
+            img: "/Frame 238016.png",
+            title: "Maglia INTER x VR46 EDIZIONE LIMITATA",
+
         },
         {
-            img: "/Rectangle 8 (2).png",
-            title: "Maglia Ufficiale Inter 2024/25",
-            desc: "Indossa i colori nerazzurri con la maglia ufficiale della nuova stagione. Tessuto traspirante e design autentico.",
+            img: "/Frame 238017.png",
+            title: "Maglia INTER x VR46 EDIZIONE LIMITATA",
+
         },
         {
-            img: "/Rectangle 8 (2).png",
-            title: "Osimhen verso la Ligue 1",
-            desc: "Victor Osimhen, capocannoniere della Serie A, vicino a un trasferimento al Marsiglia.",
+            img: "/Frame 238017.png",
+            title: "Maglia INTER x VR46 EDIZIONE LIMITATA",
         },
-       
+
     ];
-  return (
-    <div>
-       <div className="w-full md:ml-7 text-center pl-6 mt-6 md:mt-20">
+    return (
+        <div>
+            <div className="w-full md:ml-7 text-center pl-6 mt-6 md:mt-20">
                 {/* Header */}
                 <h2 className="text-2xl md:text-3xl text-center font-semibold md:font-normal text-[25px] md:text-[45px]  text-[#0A1A2F] mb-2">
-                   Scelti per Te
+                    Ultimi prodotti
                 </h2>
                 <p className="hidden md:block text-[17px]  text-[#333333] text-center mt-6 mb-6">
-                    Scopri la nostra selezione di maglie, accessori e articoli ufficiali per vivere il calcio ogni giorno.
-                </p>
-                <p className="md:hidden text-[10px] pr-4 text-[#333333] text-center mt-6 mb-6">
-                   Rimani aggiornato con le novità più importanti dal mondo del calcio: trasferimenti, risultati, curiosità e tanto altro in tempo reale.
+                    Comfort e stile in un solo capo.
                 </p>
 
                 {/* Scrollable Cards */}
@@ -70,11 +64,15 @@ const SceltiperTe = () => {
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="md:h-100 w-[150px] md:w-130 object-cover rounded-lg"
-                            /> 
+                                className="md:h-100 w-[150px] md:w-130 object-contain"
+                            />
                             <div className="md:p-4">
                                 <h3 className="font-bold text-[9px] md:text-[22px] text-[#000000] mb-2">{item.title}</h3>
-                            <p className="text-[8px] md:text-[13px] text-[#000000] mb-4">{item.desc}</p>
+                                <div className='flex items-center gap-2'>
+                                    <p className='text-[#0A1A2F] text-[22px] font-bold'>€35.00</p>
+                                    <img src="/Frame 35.png" />
+
+                                </div>
                                 <div className='flex gap-1 md:gap-2 items-center'>
                                     <AddToCartBtn />
                                     <Button text="Buy Now" />
@@ -87,13 +85,12 @@ const SceltiperTe = () => {
 
                 {/* Scroll Buttons Below */}
                 <div className="hidden md:flex justify-center gap-12 mt-4">
-                    <img src='/Frame 237997.png' className='w-[40px] h-[40px] cursor-pointer' onClick={() => scroll("left")}/>
-            <img src='/Frame 237998.png' className='w-[40px] h-[40px] cursor-pointer' onClick={() => scroll("right")} />
+                    <img src='/Frame 237997.png' className='w-[40px] h-[40px] cursor-pointer' onClick={() => scroll("left")} />
+                    <img src='/Frame 237998.png' className='w-[40px] h-[40px] cursor-pointer' onClick={() => scroll("right")} />
                 </div>
             </div>
-    </div>
-  )
+        </div>
+    )
 }
 
-export default SceltiperTe
-
+export default UltimiProdoti

@@ -13,6 +13,7 @@ import ProductService from '../components/ProductService'
 import Piùvenduti from '../components/Piùvenduti'
 import FAQs from '../components/FAQs'
 import Reviews from '../components/Reviews'
+import UltimiProdoti from '../components/UltimiProdoti'
 
 const ProductHomepage = () => {
 
@@ -120,23 +121,9 @@ const ProductHomepage = () => {
         </div>
 
       </div>
-
-      <div className='py-4 md:py-8 flex justify-center items-center'>
-        <HomeSections heading="Ultimi prodotti" subheading="Comfort e stile in un solo capo." gap="7" cards={
-        
-          <UltimiCard />
-          
-        } />
-      </div>
-
-
-      <div className='py-4 md:py-8 flex justify-center items-center'>
-
+      <UltimiProdoti />
         <Piùvenduti />
 
-
-
-      </div>
       <div className='flex flex-col gap-4 px-6 md:px-7 md:py-12 justify-center items-center'>
         <div className='flex w-[100vw] px-10 md:px-20  md:w-full overflow-auto md:overflow-hidden gap-3 md:gap-6'>
           <img src='/Frame 238038.png' className='md:w-[550px] md:h-[300px] object-contain' />
