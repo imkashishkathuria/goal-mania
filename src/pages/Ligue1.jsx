@@ -21,7 +21,7 @@ const Ligue1 = () => {
         } />
       </div>
       <Classifica />
-      <UltimeNotizie img1="/Frame 237883 (8).png" img2="/Frame 237883 (9).png" img3="/a46443266d890128c17885167521f18502a63998.jpg" />
+      <UltimeNotizie img1="/Frame 237883 (8).png" img2="/Frame 237883 (9).png" img3="/a46443266d890128c17885167521f18502a63998.jpg" heading="Ultime Notizie" paragraph="Rimani aggiornato con le novità più importanti dal mondo del calcio: trasferimenti, risultati, curiosità e tanto altro in tempo reale." title1="Inzaghi all’Al-Hilal" title2="Serie A: Calendario 2024/25" title3="Colpo di Mercato del Milan" desc1="Simone Inzaghi lascia l’Inter per una nuova avventura in Arabia Saudita con un contratto da 10 milioni a stagione." desc2="Ufficializzate le date della prossima stagione: big match e derby già attesi dai tifosi." desc3="Arriva un nuovo attaccante internazionale per rinforzare il reparto offensivo rossonero." />
       <Footer />
     </div>
 

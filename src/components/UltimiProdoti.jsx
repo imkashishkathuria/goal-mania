@@ -1,9 +1,11 @@
 import React, { useRef } from 'react'
 import AddToCartBtn from './AddToCartBtn';
 import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 const UltimiProdoti = () => {
     const scrollRef = useRef(null);
+    const navigate = useNavigate();
 
     const scroll = (direction) => {
         if (direction === "left") {
@@ -54,12 +56,12 @@ const UltimiProdoti = () => {
                 {/* Scrollable Cards */}
                 <div
                     ref={scrollRef}
-                    className="flex overflow-x-auto md:gap-4 no-scrollbar pb-4 md:mt-10"
+                    className="flex overflow-x-auto md:gap-4 no-scrollbar pb-4 md:mt-10" 
                 >
                     {articles.map((item, i) => (
                         <div
                             key={i}
-                            className="flex-shrink-0 w-40 md:w-100 bg-white rounded-lg overflow-hidden text-left"
+                            className="flex-shrink-0 w-40 md:w-100 bg-white rounded-lg overflow-hidden text-left" onClick={() => navigate(`/product${item.img}`)}
                         >
                             <img
                                 src={item.img}

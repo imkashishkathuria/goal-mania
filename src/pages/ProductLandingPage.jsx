@@ -73,7 +73,7 @@ const ProductLandingPage = () => {
     <div>
       <Header />
       <div className="flex flex-col md:grid grid-cols-12 md:gap-6 px-7 py-6 ">
-        
+
         <div className='hidden md:flex col-span-2  flex-col gap-3 items-center'>
           <img src='/weui_arrow-outlined (1).png' />
           <div className="flex-1 overflow-y-auto">
@@ -91,32 +91,33 @@ const ProductLandingPage = () => {
               </div>
             ))}
           </div>
+          <img src='/Vector (14).png' />
         </div>
         <div className='md:hidden flex flex-col gap-1 mb-2'>
-          <h2 className="text-[24px] font-extrabold text-[#000000]">
+          <h2 className="text-[20px] md:text-[24px] font-extrabold text-[#000000]">
             One Life Graphic T-shirt
           </h2>
           <p className="text-[#00000099] text-[13px]">
             This graphic t-shirt which is perfect for any occasion. Crafted from a
             soft and breathable fabric, it offers superior comfort and style.
           </p>
-          
+
 
 
         </div>
-        
+
         <div className="md:col-span-5 md:flex">
           <img src={`/${image.id}`} alt="Main Product" className="md:w-[500px] md:h-[750px] object-contain md:-mt-23" />
         </div>
         <div className="md:hidden flex items-center gap-3 mt-2">
-            <span className="text-[25px] font-extrabold text-[#000000]">$260</span>
-            <span className="text-[18px] text-[#000000]">$300</span>
-            <span className="text-[#E53E3E] font-medium">-40%</span>
-            <img src='/Frame 11.png' className='object-contain w-[100px]' />
-          </div>
+          <span className="text-[25px] font-extrabold text-[#000000]">$260</span>
+          <span className="text-[18px] text-[#000000]">$300</span>
+          <span className="text-[#E53E3E] font-medium">-40%</span>
+          <img src='/Frame 11.png' className='object-contain w-[100px]' />
+        </div>
 
-        
-        
+
+
 
         <div className=" md:col-span-5 md:mt-6">
           {/* Title & Price */}
@@ -133,7 +134,7 @@ const ProductLandingPage = () => {
             This graphic t-shirt which is perfect for any occasion. Crafted from a
             soft and breathable fabric, it offers superior comfort and style.
           </p>
-          <hr className='w-[400px] h-[2px] mt-5 text-[#b1b1b199] mb-4' />
+          <hr className='w-[290px] md:w-[400px] h-[2px] mt-5 text-[#b1b1b199] mb-4' />
 
           {/* Customize */}
           <h3 className="font-semibold text-[25px] md:text-[20px] text-[#FF7A00]">
@@ -156,7 +157,7 @@ const ProductLandingPage = () => {
               </p>
             </div>
           </div>
-          <hr className='w-[400px] h-[2px] mt-5 text-[#b1b1b199] mb-4' />
+          <hr className='w-[290px] md:w-[400px] h-[2px] mt-5 text-[#b1b1b199] mb-4' />
 
           {/* Input Fields */}
           <div className="flex flex-col md:flex-row gap-3 mt-4">
@@ -212,19 +213,19 @@ const ProductLandingPage = () => {
           {/* Sizes */}
           <h4 className="mt-6 font-semibold text-[#0A1A2F]">Choose Size <span className='md:hidden'>& Quantity</span></h4>
           <div className='md:hidden flex gap-3 mt-2'>
-              <div className='flex gap-1 items-center'>
-                <img src='/Ellipse 45.png' className='w-[14px] h-[14px]' />
-                <p className='text-[14px]'>
-                  Small
-                </p>
-              </div>
-              {["Medium", "Large", "Kids"].map((item, index) => (
-                <div className='flex gap-1 items-center'>
-                  <div key={index} className='w-[14px] h-[14px] bg-[#D9D9D9] rounded-full' />
-                  <p className='text-[14px]'>{item}</p>
-                </div>
-              ))}
+            <div className='flex gap-1 items-center'>
+              <img src='/Ellipse 45.png' className='w-[14px] h-[14px]' />
+              <p className='text-[14px]'>
+                Small
+              </p>
             </div>
+            {["Medium", "Large", "Kids"].map((item, index) => (
+              <div className='flex gap-1 items-center'>
+                <div key={index} className='w-[14px] h-[14px] bg-[#D9D9D9] rounded-full' />
+                <p className='text-[14px]'>{item}</p>
+              </div>
+            ))}
+          </div>
           <div className="hidden md:flex gap-2 flex-wrap mt-3">
             {sizes.map((size) => (
               <button
@@ -241,7 +242,7 @@ const ProductLandingPage = () => {
 
           {/* Quantity & Buttons */}
           <div className="flex items-center gap-4 mt-6 mb-10">
-            
+
             <div className="hidden md:flex items-center bg-[#F0F0F0] rounded-full">
               <button
                 className="px-3 py-2"
@@ -256,8 +257,20 @@ const ProductLandingPage = () => {
               </button>
             </div>
 
-            <AddToCartBtn px="10" py="8" />
-            <Button text="Buy Now" px="30" py="8" />
+            {/* <AddToCartBtn />
+            <Button text="Buy Now" /> */}
+            <div className={`border border-[#0A1A2F] rounded-[20px] md:rounded-[30px] text-[#0A1A2F] md:py-[7px] px-[15px] text-[7px] md:text-[12px]`}>
+              <div className='flex gap-2 items-center cursor-pointer'>
+                <p className={`text-[12px] md:text-[14px]`}>Add to Cart</p>
+                <img src='/mdi-light_arrow-up (1).png' className='w-[13px] h-[13px] md:w-[10px] md:h-[10px]' />
+              </div>
+            </div>
+            <div className={`bg-[#FF7A00] rounded-[30px] md:rounded-[20px] font-bold text-[#0A1A2F] md:py-[7px] px-[15px] text-[12px]  md:text-[14px]`} >
+              <div className='flex gap-0.5 md:gap-2 items-center cursor-pointer'>
+                <p>Buy Now</p>
+                <img src='/mdi-light_arrow-up (1).png' className='w-[13px] h-[13px] md:w-[13px] md:h-[13px]' />
+              </div>
+            </div>
             <img src='/Vector (8).png' />
           </div>
         </div>
@@ -339,41 +352,41 @@ const ProductLandingPage = () => {
             <div className='flex flex-col gap-2'>
               <p>Premium Quality Materials
                 Our jerseys are crafted from high-quality, breathable materials that ensure comfort during wear. Each jersey is made with attention to detail, featuring:
-                
-                </p>
-                <div>
-             <ul className='list-disc pl-5'>
-              <li>Premium polyester fabric with moisture-wicking technology</li>
-                <li>Durable stitching for long-lasting wear</li>
-                <li>Official team and sponsor logos</li>
-                <li>Authentic design and colors</li></ul>
-                </div>
+
+              </p>
+              <div>
+                <ul className='list-disc pl-5'>
+                  <li>Premium polyester fabric with moisture-wicking technology</li>
+                  <li>Durable stitching for long-lasting wear</li>
+                  <li>Official team and sponsor logos</li>
+                  <li>Authentic design and colors</li></ul>
+              </div>
             </div>
             <div className='flex flex-col gap-2'>
               <p>Delivery Information
-                
-                </p>
-                <div>
-             <ul className='list-disc pl-5'>
-              <li>Shipping: 7–14 days</li>
-                <li>Refund: max within 7 days</li>
+
+              </p>
+              <div>
+                <ul className='list-disc pl-5'>
+                  <li>Shipping: 7–14 days</li>
+                  <li>Refund: max within 7 days</li>
                 </ul>
-                </div>
+              </div>
             </div>
             <div className='flex flex-col gap-2'>
               <p> Secure Shopping Guarantee
-                
-                </p>
-                <div>
-             <ul className='list-disc pl-5'>
-              <li>100% Authentic Product Guarantee</li>
-                <li>Secure Payment Processing</li>
-                 <li>Money-Back Guarantee</li>
+
+              </p>
+              <div>
+                <ul className='list-disc pl-5'>
+                  <li>100% Authentic Product Guarantee</li>
+                  <li>Secure Payment Processing</li>
+                  <li>Money-Back Guarantee</li>
                   <li>Customer Support 7 Days a Week</li>
                 </ul>
-                </div>
+              </div>
             </div>
-          
+
           </div>
         } />
       </div>

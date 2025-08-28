@@ -31,74 +31,7 @@ const ChampionsLeague = () => {
       </div>
 
       <ProssimePartite heading="#FF7A00" />
-      {/* <UltimeNotizie img1="/Frame 237883 (10).png" img2="/Frame 237883 (11).png" img3="/Frame 237883 (12).png" /> */}
-      <div className='px-7 md:px-0 flex justify-center items-center py-7'>
-        <HomeSections headingcolor="#FF7A00"  heading="Ultime Notizie" subheading="Rimani aggiornato con le novità più importanti dal mondo del calcio: trasferimenti, risultati, curiosità e tanto altro in tempo reale." gap="5" cards={
-            <div className='flex px-3 md:px-20 gap-3 overflow-x-auto md:overflow-hidden'>
-            
-                  <div className='md:hidden w-[200px] shrink-0'>
-                <HomeCards image="/Frame 237883 (10).png" imgwidth="400" imgheight="250" heading="Inzaghi all’Al-Hilal" subheading="Simone Inzaghi lascia l’Inter per una nuova avventura in Arabia Saudita con un contratto da 10 milioni a stagione."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                  <div className='hidden md:block w-full'>
-                <HomeCards image="/Frame 237883 (10).png"heading="Inzaghi all’Al-Hilal" subheading="Simone Inzaghi lascia l’Inter per una nuova avventura in Arabia Saudita con un contratto da 10 milioni a stagione."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                 <div className='md:hidden w-[200px] shrink-0'>
-                <HomeCards image="/Frame 237883 (11).png" imgwidth="400" imgheight="250" heading="Serie A: Calendario 2024/25" subheading="Ufficializzate le date della prossima stagione: big match e derby già attesi dai tifosi."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                
-                </div>
-
-                 <div className='hidden md:block w-full'>
-                <HomeCards image="/Frame 237883 (11).png"  imgwidth="400" imgheight="250" heading="Serie A: Calendario 2024/25" subheading="Ufficializzate le date della prossima stagione: big match e derby già attesi dai tifosi."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                
-                </div>
-
-                
-                 <div className='md:hidden w-[200px] shrink-0'>
-                <HomeCards image="/Frame 237883 (12).png" imgwidth="400" imgheight="250" heading="Colpo di Mercato del Milan" subheading="Arriva un nuovo attaccante internazionale per rinforzare il reparto offensivo rossonero." hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                <div className='hidden md:block w-full'>
-                <HomeCards image="/Frame 237883 (12).png" imgwidth="400" imgheight="250" heading="Colpo di Mercato del Milan" subheading="Arriva un nuovo attaccante internazionale per rinforzare il reparto offensivo rossonero." hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                </div>
-        }/>
-      
-    </div>
+      <UltimeNotizie img1="/Frame 237883 (8).png" img2="/Frame 237883 (9).png" img3="/a46443266d890128c17885167521f18502a63998.jpg" heading="Ultime Notizie" paragraph="Rimani aggiornato con le novità più importanti dal mondo del calcio: trasferimenti, risultati, curiosità e tanto altro in tempo reale." title1="Inzaghi all’Al-Hilal" title2="Serie A: Calendario 2024/25" title3="Colpo di Mercato del Milan" desc1="Simone Inzaghi lascia l’Inter per una nuova avventura in Arabia Saudita con un contratto da 10 milioni a stagione." desc2="Ufficializzate le date della prossima stagione: big match e derby già attesi dai tifosi." desc3="Arriva un nuovo attaccante internazionale per rinforzare il reparto offensivo rossonero." headingcolor="#FF7A00" />
       <Footer />
     </div>
   )
