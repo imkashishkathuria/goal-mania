@@ -1,77 +1,85 @@
-import React from 'react'
-import HomeSections from './HomeSections'
-import HomeCards from './HomeCards'
 
-const UltimeNotizie = ({ img1, img2, img3 }) => {
-  return (
-    <div className='px-7 md:px-0 flex justify-center items-center py-7'>
-        <HomeSections  heading="Ultime Notizie" subheading="Rimani aggiornato con le novità più importanti dal mondo del calcio: trasferimenti, risultati, curiosità e tanto altro in tempo reale." gap="5" cards={
-            <div className='flex px-3 md:px-20 gap-3 overflow-x-auto md:overflow-hidden'>
-            
-                  <div className='md:hidden w-[200px] shrink-0'>
-                <HomeCards image={img1} imgwidth="400" imgheight="250" heading="Inzaghi all’Al-Hilal" subheading="Simone Inzaghi lascia l’Inter per una nuova avventura in Arabia Saudita con un contratto da 10 milioni a stagione."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                  <div className='hidden md:block w-full'>
-                <HomeCards image={img1} heading="Inzaghi all’Al-Hilal" subheading="Simone Inzaghi lascia l’Inter per una nuova avventura in Arabia Saudita con un contratto da 10 milioni a stagione."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                 <div className='md:hidden w-[200px] shrink-0'>
-                <HomeCards image={img2} imgwidth="400" imgheight="250" heading="Serie A: Calendario 2024/25" subheading="Ufficializzate le date della prossima stagione: big match e derby già attesi dai tifosi."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                
+import React, { useRef } from 'react'
+
+const UltimeNotizie = ({ img1, img2, img3, heading, paragraph, headingcolor, title1, title2, title3, desc1, desc2, desc3 })  => {
+    const scrollRef = useRef(null);
+
+    const scroll = (direction) => {
+        if (direction === "left") {
+            scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
+        } else {
+            scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
+        }
+    };
+    const articles = [
+        {
+            img: img1,
+            title: title1,
+            desc: desc1,
+        },
+        {
+            img: img2,
+            title: title2,
+            desc: desc2,
+        },
+        {
+            img: img3,
+            title: title3,
+            desc: desc3,
+        },
+
+    ];
+
+
+    return (
+        <div>
+            <div className="w-full md:ml-7 text-center pl-6 mt-6 md:mt-20">
+                {/* Header */}
+                <h2 className={`text-2xl md:text-3xl text-center font-semibold md:font-normal text-[25px] md:text-[45px]  text-[${headingcolor}] mb-2`}>
+                    {heading}
+                </h2>
+                <p className="hidden md:block text-[17px]  text-[#333333] text-center mt-6 mb-6">
+                   {paragraph}
+                </p>
+                <p className="md:hidden text-[10px] pr-4 text-[#333333] text-center mt-6 mb-6">
+                    {paragraph}
+                </p>
+
+                {/* Scrollable Cards */}
+                <div
+                    ref={scrollRef}
+                    className="flex overflow-x-auto gap-4 no-scrollbar pb-4 md:mt-10"
+                >
+                    {articles.map((item, i) => (
+                        <div
+                            key={i}
+                            className="flex-shrink-0 w-50 md:w-130 bg-white rounded-lg overflow-hidden text-left"
+                        >
+                            <img
+                                src={item.img}
+                                alt={item.title}
+                                className="w-full md:h-[400px] rounded-[4px] md:rounded-[10px] object-cover"
+                            />
+                            <div className="py-2 md:p-4">
+                                <h3 className="font-bold text-[14px] md:text-[22px] text-[#000000] mb-2">{item.title}</h3>
+                                <p className="text-[10px] md:text-[13px] text-[#000000] mb-4">{item.desc}</p>
+                                <div className='border-t border-black md:w-[300px]' />
+                                <button className="text-sm text-[#000000]  font-semibold">
+                                    Leggi Ora →
+                                </button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
-                 <div className='hidden md:block w-full'>
-                <HomeCards image={img2}  imgwidth="400" imgheight="250" heading="Serie A: Calendario 2024/25" subheading="Ufficializzate le date della prossima stagione: big match e derby già attesi dai tifosi."  hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                
+                {/* Scroll Buttons Below */}
+                <div className="hidden md:flex justify-center gap-10 mt-4">
+                    <img src='/Frame 237997.png' className='w-[40px] h-[40px] cursor-pointer' onClick={() => scroll("left")} />
+                    <img src='/Frame 237998.png' className='w-[40px] h-[40px] cursor-pointer' onClick={() => scroll("right")} />
                 </div>
-
-                
-                 <div className='md:hidden w-[200px] shrink-0'>
-                <HomeCards image={img3} imgwidth="400" imgheight="250" heading="Colpo di Mercato del Milan" subheading="Arriva un nuovo attaccante internazionale per rinforzare il reparto offensivo rossonero." hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                <div className='hidden md:block w-full'>
-                <HomeCards image={img3} imgwidth="400" imgheight="250" heading="Colpo di Mercato del Milan" subheading="Arriva un nuovo attaccante internazionale per rinforzare il reparto offensivo rossonero." hr={
-                    <div className='border-t border-black md:w-[300px]' />
-                }
-                btn3={
-                    <img src='/Frame 237925.png' className='w-[75px] h-[18px] object-contain' />
-                } 
-                />
-                </div>
-                </div>
-        }/>
-      
-    </div>
-  )
+            </div>
+        </div>
+    )
 }
 
 export default UltimeNotizie
