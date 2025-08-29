@@ -26,7 +26,7 @@ const Header = () => {
     },
     { name: "articles", url: "articles" },
     { name: "info", url: "" },
-    { name: "about", url: "" },
+    { name: "about", url: "about" },
     { name: "contact", url: "contact" },
     { name: "shop", url: "product" },
   ];
