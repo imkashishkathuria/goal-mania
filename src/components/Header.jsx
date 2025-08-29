@@ -24,7 +24,7 @@ const Header = () => {
         { name: "Colpo di Mercato", url: "category/colpo-di-mercato" },
       ],
     },
-    { name: "articles", url: "" },
+    { name: "articles", url: "articles" },
     { name: "info", url: "" },
     { name: "about", url: "" },
     { name: "contact", url: "contact" },
@@ -32,7 +32,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="flex justify-between px-[20px] md:px-[70px] py-[20px] bg-black md:bg-[#0A1A2F] items-center">
+    <div className="flex justify-between px-[20px] md:px-[70px] py-[20px] bg-[#0A1A2F] items-center">
       <div className="flex md:hidden w-full justify-between items-center">
         <div className="flex gap-2 items-center">
 

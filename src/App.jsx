@@ -15,6 +15,11 @@ import PopupV1 from './pages/PopupV1'
 import PopupV2 from './pages/PopupV2'
 import ChampionsLeague from './pages/ChampionsLeague'
 import ColpodiMercato from './pages/ColpodiMercato'
+import Articles from './pages/Articles'
+import AboutUs from './pages/AboutUs'
+import Fantacalcio from './pages/Fantacalcio'
+import MystryBox from './pages/MystryBox'
+import ErrorPage from './pages/ErrorPage'
 
 const App = () => {
   return (
@@ -28,6 +33,10 @@ const App = () => {
           <Route path='/login-otp' element={<SignupOtp />} />
           <Route path='/popup-one' element={<PopupV1 />} />
           <Route path='/popup-two' element={<PopupV2 />} />
+          <Route path='/articles' element={<Articles />} />
+          <Route path='/error' element={<ErrorPage />} />
+          <Route path='/about' element={<AboutUs />} />
+           <Route path='/mystry-box' element={<MystryBox />} />
 
           <Route path="category/seriea" element={<SeriesA />} />
           <Route path="category/premier-league" element={<PremierLeague />} />
@@ -35,6 +44,8 @@ const App = () => {
           <Route path='category/ligue1' element={<Ligue1 />} />
           <Route path='category/champions-league' element={<ChampionsLeague />} />
           <Route path='category/colpo-di-mercato' element={<ColpodiMercato />} />
+          <Route path='category/fantacalcio' element={<Fantacalcio />} />
+          
 
         </Routes>
     </div>

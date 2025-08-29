@@ -21,11 +21,11 @@ const Contact = () => {
           />
           <img src='/Frame 238100.png' className='md:hidden w-full object-contain' />
           <div className="hidden md:flex flex-col bg-[#0B1B3B] text-white p-6 rounded-2xl space-y-4">
-            <p className="flex items-center gap-3">
+            {/* <p className="flex items-center gap-3">
               <img src='/Vector (11).png' /> +39 090 330 47732
-            </p>
+            </p> */}
             <p className="flex items-center gap-3">
-              <img src='/Vector (12).png' /> safe.support@goal-mania.it
+              <img src='/Vector (12).png' /> goalmaniaofficial@gmail.com
             </p>
             <p className="flex items-center gap-3 text-sm">
               <img src='\Frame (6).png' /> 3° Piano, Via Roma 245, Complesso i-Hub, di fronte a
