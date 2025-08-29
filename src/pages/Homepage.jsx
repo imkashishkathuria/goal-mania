@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import HomeHero from '../components/HomeHero'
 import SerieAClubs from '../components/SerieAClubs'
@@ -8,10 +8,18 @@ import ProssimePartite from '../components/ProssimePartite'
 import StorieinPrimoPiano from '../components/StorieinPrimoPiano'
 import UltimeNotizie2 from '../components/UltimeNotizie2'
 import Footer from '../components/Footer'
+import PopupV1 from './PopupV1'
 
 const Homepage = () => {
+  const [popup, setPopup] = useState(false);
+  useEffect(()=>{
+    setPopup(true);
+  }, [])
   return (
     <div>
+      {popup && (
+        <PopupV1 onClose={()=>setPopup(false)} />
+      )}
       <Header />
       <HomeHero />
       <SerieAClubs />

@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { X } from "lucide-react"; 
 
-const PopupV1 = () => {
+const PopupV1 = ({onClose}) => {
   const [isOpen, setIsOpen] = useState(true);
 
   if (!isOpen) return null;
   return (
-    <div className="md:fixed inset-0 flex items-center justify-center bg-black/40 z-50">
+    <div className="md:fixed inset-0 backdrop-blur-[4px] flex items-center justify-center bg-black/40 z-50">
       <div className="bg-white px-8 rounded-2xl shadow-lg w-[90%] md:w-[900px] overflow-hidden flex flex-col md:flex-row relative">
         {/* Close Button */}
         <button
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
           className="absolute top-4 left-4 bg-[#0A1A2F] text-white p-2 rounded-full"
         >
           <X size={16} />
