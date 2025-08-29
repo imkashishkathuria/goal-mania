@@ -36,7 +36,7 @@ const App = () => {
           <Route path='/articles' element={<Articles />} />
           <Route path='/error' element={<ErrorPage />} />
           <Route path='/about' element={<AboutUs />} />
-           <Route path='/mystry-box' element={<MystryBox />} />
+           <Route path='category/mystry-box' element={<MystryBox />} />
 
           <Route path="category/seriea" element={<SeriesA />} />
           <Route path="category/premier-league" element={<PremierLeague />} />
